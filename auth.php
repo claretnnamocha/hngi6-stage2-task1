@@ -4,6 +4,8 @@ function connect_db(string $host, string $dbname, string $user, string $password
     try {
         return new PDO("pgsql:host=$host;dbname=$dbname", $user, $password);
     } catch (Exception $e) {
+        throw new $e;
+        
         return false;
     }
 }
