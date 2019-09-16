@@ -2,7 +2,7 @@
 
 function connect_db(string $host, string $dbname, string $user, string $password) {
     try {
-        return new PDO("mysql:host=$host;dbname=$dbname", $user, $password);
+        return new PDO("pgsql:host=$host;dbname=$dbname", $user, $password);
     } catch (Exception $e) {
         return false;
     }
