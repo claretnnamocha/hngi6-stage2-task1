@@ -19,6 +19,7 @@ function login(PDO $db_connect, string $email, string $password) {
     $stmnt = $db_connect->prepare($sql);
     $stmnt->execute([ 'email' => $email ]);
     $data = $stmnt->fetchAll(PDO::FETCH_OBJ);
+    print_r($data);
     if (!((is_array($data) and (count($data) == 1)))) {
         return $failed;
     }
