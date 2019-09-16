@@ -1,6 +1,7 @@
 <?php
 if (isset($_POST['btn'])) {
-    print_r('expression');
+    require 'auth.php';
+    $db = connect_db('localhost','db','root','');
 }
 
 ?>
