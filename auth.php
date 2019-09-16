@@ -46,4 +46,4 @@ function set_up()
 // $db = connect_db('localhost', 'hng', 'root', '');
 // $l = login($db, 'photizo', '1234');
 // print_r($l);
-set_up();
+// set_up();
