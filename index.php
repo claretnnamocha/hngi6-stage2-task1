@@ -1,3 +1,9 @@
+<?php
+if (isset($_POST['btn'])) {
+    print_r('expression');
+}
+
+?>
 <!DOCTYPE html>
 <head>
     <meta charset="utf-8">
@@ -26,7 +32,7 @@
         <div class="flex-items items-01">
         <div class="form-container">
                 <h1>Sign in to your Account</h1>
-                <form >
+                <form method="post">
                     <span style="text-align: center;color: red;margin: 2px auto;display: block;">Login Failed!</span>
                     <div class="form-input">
                         <label for="email">Email Address:</label>
@@ -36,7 +42,7 @@
                         <label for="password">Password:</label>
                         <input type="password" name="password" placeholder="password">
                     </div>
-                        <button type="submit">Sign in</button>
+                        <button type="submit" name="btn">Sign in</button>
                         <p>Don't have an account yet? <a href="#">click here</a> </p>
                 </form>
         </div>
