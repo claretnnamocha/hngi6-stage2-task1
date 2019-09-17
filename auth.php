@@ -17,6 +17,8 @@ function login(string $email, string $password) {
         'message' => 'Invalid email or password!'
     ];
     $user = R::find('user','email = :email',[ 'email' => $email ]);
+    print_r($user);
+    print_r($email);
     if (count($user) != 1) {
         return $failed;
     }
