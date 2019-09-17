@@ -1,5 +1,5 @@
 <?php
-require_once 'rb.php'
+require_once 'rb.php';
 
 function connect_db(string $host, string $dbname, string $user, string $password) {
     try {
