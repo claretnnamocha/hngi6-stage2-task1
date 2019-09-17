@@ -21,8 +21,6 @@ function login(string $email, string $password) {
         return $failed;
     }
     $user = array_values($user)[0];
-    $user->password = password_hash('1234', PASSWORD_DEFAULT);
-    R::store($user);
     if (!password_verify($password, $user->password)) {
         return $failed;
     }
