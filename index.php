@@ -2,6 +2,8 @@
 ini_set('display_errors',1); error_reporting(E_ALL);
 if (isset($_POST['btn'])) {
     require 'auth.php';
+    $login = login(filter_input(INPUT_POST, 'email'),filter_input(INPUT_POST, 'password'));
+    print_r($login);
 }
 
 ?>
