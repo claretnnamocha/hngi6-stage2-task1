@@ -35,7 +35,7 @@ function set_up()
 {
     $user = R::dispense('user');
     $user->email = 'photizo@hng.com';
-    $user->password = '$2y$10$7X0xb6ghz4yPLfTaaXazz.Hp08wsJ.DwxsQVK5734gzWjsV3sXxiO';
+    $user->password = password_hash('1234', PASSWORD_DEFAULT);
     R::store($user);
     print_r('expression');
 }
