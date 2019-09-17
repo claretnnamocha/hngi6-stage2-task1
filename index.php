@@ -36,14 +36,18 @@ if (isset($_POST['btn'])) {
         <div class="form-container">
                 <h1>Sign in to your Account</h1>
                 <form method="post">
-                    <span style="text-align: center;color: red;margin: 2px auto;display: block;">Login Failed!</span>
+                    <?php if (isset($login) and $login['status']): ?>
+                    <span style="text-align: center;color: green;margin: 2px auto;display: block;"><?php print $login['message'] ?></span>
+                    <?php elseif(isset($login) and !$login['status']): ?>
+                    <span style="text-align: center;color: red;margin: 2px auto;display: block;"><?php print $login['message'] ?></span>
+                    <?php endif ?>
                     <div class="form-input">
                         <label for="email">Email Address:</label>
-                        <input type="email" name="email" placeholder="email">
+                        <input type="email" name="email" placeholder="email" required>
                     </div>
                     <div class="form-input">
                         <label for="password">Password:</label>
-                        <input type="password" name="password" placeholder="password">
+                        <input type="password" name="password" placeholder="password" required>
                     </div>
                         <button type="submit" name="btn">Sign in</button>
                         <p>Don't have an account yet? <a href="#">click here</a> </p>
