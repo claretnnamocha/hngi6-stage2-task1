@@ -22,7 +22,7 @@ function login(string $email, string $password) {
     }
     $user = array_values($user)[0];
     print_r($password.' '.$email);
-    print_r(json_encode(password_verify($password, $user->password)));
+    print_r(json_encode(password_verify($password, password_hash('1234', PASSWORD_DEFAULT))));
     if (!password_verify($password, $user->password)) {
         return $failed;
     }
