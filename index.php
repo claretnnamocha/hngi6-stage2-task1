@@ -3,7 +3,6 @@ ini_set('display_errors',1); error_reporting(E_ALL);
 if (isset($_POST['btn'])) {
     require 'auth.php';
     $login = login(filter_input(INPUT_POST, 'email'),filter_input(INPUT_POST, 'password'));
-    print_r($login);
 }
 
 ?>
@@ -43,11 +42,11 @@ if (isset($_POST['btn'])) {
                     <?php endif ?>
                     <div class="form-input">
                         <label for="email">Email Address:</label>
-                        <input type="email" name="email" placeholder="email" required>
+                        <input type="email" name="email" placeholder="email" required="required">
                     </div>
                     <div class="form-input">
                         <label for="password">Password:</label>
-                        <input type="password" name="password" placeholder="password" required>
+                        <input type="password" name="password" placeholder="password" required="required">
                     </div>
                         <button type="submit" name="btn">Sign in</button>
                         <p>Don't have an account yet? <a href="#">click here</a> </p>
