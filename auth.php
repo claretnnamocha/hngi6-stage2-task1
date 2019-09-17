@@ -21,6 +21,7 @@ function login(string $email, string $password) {
         return $failed;
     }
     $user = array_values($user)[0];
+    print_r($password.' '.$email);
     print_r(json_encode(password_verify($password, $user->password)));
     if (!password_verify($password, $user->password)) {
         return $failed;
