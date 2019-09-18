@@ -21,7 +21,7 @@ if (isset($_POST['btn'])) {
         <div class="flex-items items-01">
             <div class="form-container">
                 <h1>Welcome to Photizo!</h1>
-                <form>
+                <form method="post">
                     <?php if (isset($signup) and $signup['status']): ?>
                     <span style="text-align: center;color: green;margin: 2px auto;display: block;"><?php print $signup['message'] ?></span>
                     <?php elseif(isset($signup) and !$signup['status']): ?>
