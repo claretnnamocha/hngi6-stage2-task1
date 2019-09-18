@@ -1,19 +1,16 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
-
 *,
 html {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    
 }
 
 body {
     display: flex;
     height: 100vh;
     font-family: 'Roboto', sans-serif;
-    color:rgb(16, 7, 77);
-
+    color: rgb(16, 7, 77);
 }
 
 section.flex-container {
@@ -32,7 +29,6 @@ section.flex-container {
 .items-01 {
     display: flex;
     background: #fdfdfd;
-    
 }
 
 .form-container {
@@ -53,23 +49,19 @@ form {
 
 input {
     width: 100%;
-    height: 2.5rem;
-    margin-bottom: 1.3rem;
+    margin-top: 6px;
+    margin-bottom: 16px;
     display: block;
-    border: none;
+    border: 1px solid #ccc;
     outline: none;
-    box-shadow: 0 0 8px 0 rgb(16, 7, 77);
-    border-radius: 0.2rem;
+    padding: 12px;
+    /* box-shadow: 0 0 8px 0 rgb(16, 7, 77); */
+    border-radius: 2px;
     font-size: 1.5rem;
 }
 
-
-/* input[type="email"]:before {
-    content: '/f0e0';
-} */
-
 button {
-    background: rgb(16, 7, 77);
+    background: #053575;
     width: 100%;
     height: 2.5rem;
     line-height: 2.5rem;
@@ -86,7 +78,7 @@ button:hover {
     background: #ffffff;
     transition: background .8s ease-in-out;
     -webkit-transition: background .8s ease-in-out;
-    color: rgb(3, 109, 248);
+    color: rgb(0, 0, 0);
     line-height: 2.5rem;
 }
 
@@ -100,51 +92,67 @@ a {
     flex-flow: column wrap;
     justify-content: center;
     padding: 3rem;
-    background:#203060 center no-repeat;
+    background: #203060 center no-repeat;
     font-size: 1.5rem;
 }
 
 .intro {
-    margin-left: 24%;
+    margin-left: 20%;
     color: #ffffff;
     font-size: 15px;
     text-align: justify;
-    font-weight:normal;
-
+    font-weight: normal;
 }
 
 span {
     border: 2px solid #F6F6F6;
-    border-radius: 10px;
     -webkit-box-decoration-break: clone;
     padding: 6px 4% 6px 4%;
-   
 }
 
-h1 span{
-    color:#ffffff;
-    font-weight:normal;
-    text-align:center;
+h1 span {
+    color: #ffffff;
+    font-weight: normal;
+    text-align: center;
     width: 300px;
- 
-
-
+    border: none;
 }
 
-h6{
+h2 span {
+    color: #ffffff;
+    font-weight: normal;
+    text-align: center;
+    width: 300px;
+}
+
+.tagline {
     font-size: 15px;
-    font-weight:normal;
-    margin-left: 17%;
-    margin-top: -30px;
-
+    font-weight: normal;
+    margin-left: 14%;
+    margin-top: -50px;
+    color: #ffffff;
+    text-align: center;
+    padding: 0.2rem;
 }
 
-::-webkit-input-placeholder{
+::-webkit-input-placeholder {
     color: #c1c1c1;
     font-size: 18px;
-
 }
 
+.logo {
+    margin: 0 auto;
+    width: 110px;
+    padding: 1rem;
+}
+
+.logo-2 {
+    margin: 0 auto;
+    width: 110px;
+    padding: 1rem;
+    background-color: #ffffff;
+    padding: 1rem;
+}
 
 
 /* MOBILE RESPONSIVENESS */
