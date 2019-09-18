@@ -2,7 +2,7 @@
 ini_set('display_errors',1); error_reporting(E_ALL);
 if (isset($_POST['btn'])) {
     require 'auth.php';
-    $login = login(filter_input(INPUT_POST, 'email'),filter_input(INPUT_POST, 'password'));
+    $signup = signup(filter_input(INPUT_POST, 'name'),filter_input(INPUT_POST, 'email'),filter_input(INPUT_POST, 'password'),filter_input(INPUT_POST, 'phone'));
 }
 ?>
 <!DOCTYPE html>
@@ -10,7 +10,7 @@ if (isset($_POST['btn'])) {
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Simple Login Page</title>
+    <title>Simple signup Page</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="photizo.css">
@@ -20,13 +20,17 @@ if (isset($_POST['btn'])) {
     <section class="flex-container">
         <div class="flex-items items-01">
             <div class="form-container">
-                <h1>Sign in to your Account</h1>
+                <h1>Welcome to Photizo!</h1>
                 <form>
-                    <?php if (isset($login) and $login['status']): ?>
-                    <span style="text-align: center;color: green;margin: 2px auto;display: block;"><?php print $login['message'] ?></span>
-                    <?php elseif(isset($login) and !$login['status']): ?>
-                    <span style="text-align: center;color: red;margin: 2px auto;display: block;"><?php print $login['message'] ?></span>
+                    <?php if (isset($signup) and $signup['status']): ?>
+                    <span style="text-align: center;color: green;margin: 2px auto;display: block;"><?php print $signup['message'] ?></span>
+                    <?php elseif(isset($signup) and !$signup['status']): ?>
+                    <span style="text-align: center;color: red;margin: 2px auto;display: block;"><?php print $signup['message'] ?></span>
                     <?php endif ?>
+                    <div class="form-input">
+                        <label for="name">Name:</label>
+                        <input type="name" name="name" placeholder="Name" required="required">
+                    </div>
                     <div class="form-input">
                         <label for="email">Email Address:</label>
                         <input type="email" name="email" placeholder="Email" required="required">
@@ -35,8 +39,13 @@ if (isset($_POST['btn'])) {
                         <label for="password">Password:</label>
                         <input type="password" name="password" placeholder="Password" required="required">
                     </div>
-                    <button type="submit">Sign in</button>
-                    <p>Not a User? <a href="signup.html">Join Us</a> </p>
+                    <div class="form-input">
+                        <label for="phone">Mobile number:</label>
+
+                        <input type="tel" name="phone" placeholder="Number" required="required">
+                    </div>
+                    <button type="submit" name="btn">Register</button>
+                    <p>Have an account? <a href="/">Log In</a> </p>
                 </form>
             </div>
         </div>

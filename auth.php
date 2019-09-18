@@ -16,7 +16,7 @@ function login(string $email, string $password) {
         'status' => false,
         'message' => 'Invalid email or password!'
     ];
-    $user = R::find('user','email = :email',[ 'email' => $email ]);
+    $user = R::find('user', 'email = :email', [ 'email' => $email ]);
     if (count($user) != 1) {
         return $failed;
     }
@@ -30,6 +30,30 @@ function login(string $email, string $password) {
     ];
 }
 
+function signup(string $name, string $email, string $password, string $number)
+{
+    $failed = [
+        'status' => false,
+        'message' => 'Registration failed!'
+    ];
+    $user = R::find('user', 'email = :email', [ 'email' => $email ]);
+    if (count($user) > 0) {
+        return [
+            'status' => false,
+            'status' => 'This email has been used before on this platform!'
+        ];
+    }
+    $user = R::dispense('user');
+    $user->name = $name;
+    $user->email = $email;
+    $user->password = password_hash($password, PASSWORD_DEFAULT);
+    $user->number = $number;
+    R::store($user);
+    return [
+        'status' => true,
+        'status' => 'Registration successful!'
+    ];
+}
 
 function set_up()
 {
