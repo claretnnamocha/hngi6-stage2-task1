@@ -40,7 +40,7 @@ function signup(string $name, string $email, string $password, string $number)
     if (count($user) > 0) {
         return [
             'status' => false,
-            'status' => 'This email has been used before on this platform!'
+            'message' => 'This email has been used before on this platform!'
         ];
     }
     $user = R::dispense('user');
@@ -51,7 +51,7 @@ function signup(string $name, string $email, string $password, string $number)
     R::store($user);
     return [
         'status' => true,
-        'status' => 'Registration successful!'
+        'message' => 'Registration successful!'
     ];
 }
 
