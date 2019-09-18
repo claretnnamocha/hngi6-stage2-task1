@@ -21,7 +21,7 @@ if (isset($_POST['btn'])) {
         <div class="flex-items items-01">
             <div class="form-container">
                 <h1>Sign in to your Account</h1>
-                <form>
+                <form method="post">
                     <?php if (isset($login) and $login['status']): ?>
                     <span style="text-align: center;color: green;margin: 2px auto;display: block;"><?php print $login['message'] ?></span>
                     <?php elseif(isset($login) and !$login['status']): ?>
