@@ -20,6 +20,7 @@ if (isset($_POST['btn'])) {
     <section class="flex-container">
         <div class="flex-items items-01">
             <div class="form-container">
+                <img src="logo-2.png" style="margin: 0 auto" alt="logo" width="101.8518518518519" height="100">
                 <h1>Sign in to your Account</h1>
                 <form method="post">
                     <?php if (isset($login) and $login['status']): ?>
@@ -41,9 +42,9 @@ if (isset($_POST['btn'])) {
             </div>
         </div>
         <div class="flex-items items-02">
-            <div class="items-02 logo">
+            <!-- <div class="items-02 logo">
                 <h2><span>TP</span></h2>
-            </div>
+            </div> -->
             <h1><span>TEAM PHOTIZO</span></h1>
             <p class="tagline"><em>...Work, Share, Collaborate.</em></p>
             <!--<p class="intro">PHOTIZO is a Greek word which means light. <br>It is a condition of divine awareness, when there is divine illumination.</p><br>-->
