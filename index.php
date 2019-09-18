@@ -36,7 +36,7 @@ if (isset($_POST['btn'])) {
                         <input type="password" name="password" placeholder="Password" required="required">
                     </div>
                     <button type="submit">Sign in</button>
-                    <p>Not a User? <a href="signup.html">Join Us</a> </p>
+                    <p>Not a User? <a href="signup.php">Join Us</a> </p>
                 </form>
             </div>
         </div>
