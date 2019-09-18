@@ -1,1 +1,1 @@
-# hngi6-stage2-task1
+# Team Photizo stage 2 task 1
